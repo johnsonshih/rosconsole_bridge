@@ -14,7 +14,7 @@ catkin_package(
   DEPENDS console_bridge
 )
 
-add_library(${PROJECT_NAME} STATIC src/bridge.cpp)
+add_library(${PROJECT_NAME} src/bridge.cpp)
 
 target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${console_bridge_LIBRARIES})
 
@@ -22,6 +22,7 @@ install(
   TARGETS ${PROJECT_NAME}
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}
 )
 
 install(
