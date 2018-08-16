@@ -17,7 +17,6 @@ catkin_package(
 add_library(${PROJECT_NAME} src/bridge.cpp)
 
 target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${console_bridge_LIBRARIES})
-set_target_properties(${PROJECT_NAME} PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
 
 install(
   TARGETS ${PROJECT_NAME}
